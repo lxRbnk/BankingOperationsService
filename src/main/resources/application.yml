@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres4
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: none
+#    hibernate.ddl-auto: create
+  liquibase:
+    change-log: classpath:db.changelog/db.changelog-master.xml
+    enabled: true
+    drop-first: false
+  security:
+        user:
+          name: root
+          password: root
+token:
+  signing:
+    key: secret
